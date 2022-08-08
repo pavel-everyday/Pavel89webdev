@@ -8,7 +8,7 @@ import Template from "../../templates/Template"
 
 // TODO: typing all !!!
 const BlogPage = () => {
-  const allPostsResponse = useStaticQuery(graphql`
+  const { site, allMarkdownRemark } = useStaticQuery(graphql`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -23,10 +23,17 @@ const BlogPage = () => {
           }
         }
       }
+      site {
+        siteMetadata {
+          pathPrefix
+        }
+      }
     }
   `)
 
-  const allPosts = allPostsResponse.allMarkdownRemark.edges.map(({ node }) => ({
+  const pathPrefix = site.siteMetadata.pathPrefix
+
+  const allPosts = allMarkdownRemark.edges.map(({ node }) => ({
     title: node.frontmatter.title,
     slug: node.frontmatter.slug,
   })) //TODO: made getter
@@ -39,7 +46,7 @@ const BlogPage = () => {
       <ul>
         {allPosts.map(({ title, slug }) => (
           <li>
-            <a href={slug}>{title}</a>
+            <a href={`${pathPrefix}${slug}`}>{title}</a>
           </li>
         ))}
       </ul>
