@@ -56,7 +56,7 @@ typings/
 
 # gatsby files
 .cache/
-# public - exclude to make gihub page
+public
 
 # Mac files
 .DS_Store
