@@ -4,6 +4,7 @@ module.exports = {
     description: `Just another one frontend blog`,
     author: `@Pavel89webdev`,
     // siteUrl: ``,
+    pathPrefix: "https://pavel89webdev.github.io/Pavel89webdev/",
   },
   plugins: [
     `gatsby-plugin-image`,
