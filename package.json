@@ -1,0 +1,45 @@
+{
+  "name": "frontend-blog",
+  "private": false,
+  "description": "Frontend blog powered by Gatsby",
+  "version": "0.1.0",
+  "author": "Pavel89webdev",
+  "dependencies": {
+    "gatsby": "^4.20.0",
+    "gatsby-plugin-image": "^2.20.0",
+    "gatsby-plugin-manifest": "^4.20.0",
+    "gatsby-plugin-sharp": "^4.20.0",
+    "gatsby-source-filesystem": "^4.20.0",
+    "gatsby-transformer-remark": "^5.20.0",
+    "gatsby-transformer-sharp": "^4.20.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "keywords": [
+    "gatsby",
+    "frontend blog",
+    "blog",
+    "blog"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build --no-uglify",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pavel89webdev/Pavel89webdev"
+  },
+  "bugs": {
+    "url": "https://github.com/Pavel89webdev/Pavel89webdev/issues"
+  }
+}
