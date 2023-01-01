@@ -1,5 +1,3 @@
-// TODO: Delete this file later ... or not?
-
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
