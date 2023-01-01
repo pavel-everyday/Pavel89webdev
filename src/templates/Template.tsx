@@ -4,33 +4,36 @@ import Layout from "../components/layout"
 
 export interface IBlogQueryData {
   markdownRemark: {
+    html: string;
     frontmatter: {
-      title: string
-      date: string
+      title: string;
+      date: string;
+      logo: string;
     }
-    html: string
   }
 }
 
+// blog post page template
 export default function Template({ data }: { data: IBlogQueryData }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+
   return (
     <Layout>
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
+      <div className="container-centered container-centered__left">
+        <span className="blog-logo">{frontmatter.logo}</span>
+        <h1 className="blog-title">{frontmatter.title}</h1>
+        <h3 className="blog-date">{frontmatter.date}</h3>
+        <article
+          className="blog-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
       </div>
     </Layout>
   )
 }
 
+// slug takes from context
 export const pageQuery = graphql`
   query ($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
@@ -39,6 +42,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        logo
       }
     }
   }

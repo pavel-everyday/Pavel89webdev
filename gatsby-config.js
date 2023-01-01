@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Pavel's Frontend Blog`,
-    description: `Just another one frontend blog`,
+    description: `personal frontend blog`,
     author: `@Pavel89webdev`,
-    // siteUrl: ``,
+    siteUrl: `https://pavel89webdev.github.io/Pavel89webdev`,
     pathPrefix: "https://pavel89webdev.github.io/Pavel89webdev",
   },
   plugins: [

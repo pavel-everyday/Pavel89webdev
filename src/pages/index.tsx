@@ -1,47 +1,33 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+// import { Link } from "gatsby"
+// import { StaticImage } from "gatsby-plugin-image"
+import "../css/index.css"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-]
+import { PostList } from "../components/PostList"
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
+    <div>
+      <div className="container-centered">
+        <h1 className="h1-title">Pavel's Frontend Blog</h1>
+        <h2 className="h2-description">
+          Hi, my name is Pavel - I'm frontend engineer. This is my personal
+          blog.
+        </h2>
+        <h2 className="h2-description">
+          I write on React and Typescript and like unit tests. In this blog I
+          write about my experience in web developing.
+        </h2>
+      </div>
+
+      <div>
+        <div className="container-centered h2-description">
+          <strong>Check my blog posts 👇</strong>
+          <PostList />
+        </div>
+      </div>
     </div>
   </Layout>
 )
