@@ -2,7 +2,7 @@
 path: "/blog/the-best-event-loop-description"
 date: "2023-01-07"
 title: "The best event loop description (video)"
-logo: "👌"
+logo: "▶️"
 ---
 
 ![YouTube video banner](https://img.youtube.com/vi/8aGhZQkoFbQ/maxresdefault.jpg)

@@ -10,8 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 
-const Layout = ({ children }) => {
-
+const Layout = ({ children, showHeader = false }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -22,10 +21,9 @@ const Layout = ({ children }) => {
     }
   `)
 
-  // TODO: add header with buttons: < , home, postList
-
   return (
     <>
+      {showHeader && <Header />}
       <div className="container-main">
         <main>{children}</main>
         <footer className="container-footer container-centered">

@@ -36,8 +36,8 @@ export const PostList = () => {
   return (
     <ul className="container-sub">
       {allPosts.map(({ title, logo, path }) => (
-        <li className="li-wide" key={path}>
-          <Link className="internal-link" to={path}>
+        <li key={path}>
+          <Link className="li-wide internal-link" to={path}>
             <span>{logo}</span>
             <span>{title}</span>
           </Link>

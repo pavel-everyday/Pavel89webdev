@@ -19,7 +19,7 @@ export default function Template({ data }: { data: IBlogQueryData }) {
   const { frontmatter, html } = markdownRemark
 
   return (
-    <Layout>
+    <Layout showHeader>
       <div className="container-centered container-centered__left">
         <span className="blog-logo">{frontmatter.logo}</span>
         <h1 className="blog-title">{frontmatter.title}</h1>
