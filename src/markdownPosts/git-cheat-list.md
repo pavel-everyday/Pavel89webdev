@@ -1,6 +1,5 @@
 ---
-slug: "/blog/my-personal-git-cheat-list"
-id: "/blog/my-personal-git-cheat-list"
+path: "/blog/my-personal-git-cheat-list"
 date: "2023-01-03"
 title: "Git cheat list"
 logo: "👌"

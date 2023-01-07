@@ -33,14 +33,14 @@ export default function Template({ data }: { data: IBlogQueryData }) {
   )
 }
 
-// slug takes from context
+// path takes from context
 export const pageQuery = graphql`
-  query ($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+  query ($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        slug
+        path
         title
         logo
       }

@@ -11,7 +11,7 @@ export const PostList = () => {
         edges {
           node {
             frontmatter {
-              slug
+              path
               title
               logo
             }
@@ -29,17 +29,17 @@ export const PostList = () => {
 
   const allPosts = allMarkdownRemark.edges.map(({ node }) => ({
     title: node.frontmatter.title,
-    slug: node.frontmatter.slug,
+    path: node.frontmatter.path,
     logo: node.frontmatter.logo
   })) //TODO: made getter
 
   return (
     <ul className="container-sub">
-      {allPosts.map(({ title, logo, slug }) => (
-        <li className="li-wide" key={slug}>
-          <Link className="internal-link" to={`${slug}`}>
-            <span>{title}</span>
+      {allPosts.map(({ title, logo, path }) => (
+        <li className="li-wide" key={path}>
+          <Link className="internal-link" to={path}>
             <span>{logo}</span>
+            <span>{title}</span>
           </Link>
         </li>
       ))}
