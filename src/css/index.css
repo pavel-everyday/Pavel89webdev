@@ -146,14 +146,27 @@ ul {
     margin-top: 3rem;
 }
 
-/* total width */
+.blog-content a {
+  color: rgb(12, 194, 218);
+  font-weight: 600;
+}
+
+.blog-content a:visited {
+  color: rgb(149 97 204);
+  font-weight: 600;
+}
+
+.blog-content img {
+  width: 100%;
+}
+
+/* custom code snippet */
 .blog-content pre::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
   height: 8px;
 }
 
-/* background of the scrollbar except button or resizer */
 .blog-content pre::-webkit-scrollbar-track {
   background-color: transparent;
 }
@@ -161,7 +174,6 @@ ul {
   background-color: transparent;
 }
 
-/* scrollbar itself */
 .blog-content pre::-webkit-scrollbar-thumb {
   background-color: #babac0;
   border-radius: 8px;
@@ -171,7 +183,7 @@ ul {
   background-color: #a0a0a5;
 }
 
-/* set button(top and bottom of the scrollbar) */
 .blog-content pre::-webkit-scrollbar-button {
   display: hidden;
 }
+/* end of custom code snippet */
