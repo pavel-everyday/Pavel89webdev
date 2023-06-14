@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, StaticQuery, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export interface IBlogQueryData {
