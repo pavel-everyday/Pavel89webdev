@@ -185,6 +185,10 @@ ul {
   font-weight: 600;
 }
 
+.blog-content p {
+  line-height: 2;
+}
+
 .blog-content a:visited {
   color: rgb(149 97 204);
   font-weight: 600;
