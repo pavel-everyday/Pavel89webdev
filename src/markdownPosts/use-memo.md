@@ -110,7 +110,7 @@ export const ComponentWithTable = (optionsForSelect) => {
 
 Now in the ```customSorter``` variable we have the ```sorter``` function and tha flag - ```isSorterCalled``` that means that all calls of ```sorter``` have an access to the same ```isSorterCalled``` variable.
 
-But than ```tableData``` will changed, the ```useMemo``` hook rememoized ```sorter``` function with initail value of the flag ```isSorterCalled``` that's mean reset the logic, and we can use sorting in the ```Table``` again.
+But then ```tableData``` will be changed, the ```useMemo``` hook rememoized ```sorter``` function with initail value of the flag ```isSorterCalled``` that's mean reset the logic, and we can use sorting in the ```Table``` again.
 
 I like to think about this as flexible closure, because we use the different values in the different renders of the component, and we can to control "reseting" the values. Off course under the hood it is usual closure and variables memoization, and no magic. 
 
